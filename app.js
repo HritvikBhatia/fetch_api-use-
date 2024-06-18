@@ -103,7 +103,8 @@ function user() {
     }
 
     // Clear the input field
-    userInputElement[0].value = '';
+    // userInputElement[0].value = '';
+    //ahhhhh have to write again
 }
 
 
