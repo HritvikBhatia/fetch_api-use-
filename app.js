@@ -4,7 +4,7 @@ async function getjokes() {
     try {
         let res = await fetch(url);
         let joke = await res.json();
-
+        
         if (joke.type === 'single') {
             displayMessage(joke.joke, 'bot');
         } else {
@@ -18,6 +18,19 @@ async function getjokes() {
     }
 }
 
+let url2 = "https://catfact.ninja/fact"
+async function catfact() {
+    try {
+        let res = await fetch(url2);
+        let data = await res.json();
+
+        console.log(data);
+        
+        displayMessage(data.fact, 'bot');
+    } catch (error) {
+        displayMessage('Failed to fetch cat fact: ' + error.message, 'bot');
+    }
+}
 
 function user() {
     const userInputElement = document.getElementsByClassName('userInput');
@@ -27,10 +40,14 @@ function user() {
 
     displayMessage(userInput, 'user');
 
-    if (userInput.toLowerCase() === 'getjokes()') {
+    if (userInput.toLowerCase() === 'getjoke') {
         getjokes();
-    } else {
-        displayMessage("Please write a valid command. Try 'getjokes()' for a random joke.", 'bot');
+    }
+    else if(userInput.toLowerCase() === 'catfact'){
+        catfact();
+    }
+    else {
+        displayMessage("Please write a valid command.", 'bot');
     }
 
     // Clear the input field
@@ -48,3 +65,5 @@ function displayMessage(message, sender) {
 
     messageContainer.scrollTop = messageContainer.scrollHeight;
 }
+
+
