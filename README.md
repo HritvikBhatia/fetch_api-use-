@@ -1,12 +1,13 @@
 # Fetch Project
 
-A simple project to fetch jokes from an API and display them in a chat interface.
+A simple project to fetch jokes and cat facts from APIs and display them in a chat interface.
 
 ## Features
 
 - Fetches random jokes from an external API
-- Displays jokes in a chat interface
-- Supports commands for fetching jokes
+- Fetches random cat facts from an external API
+- Displays jokes and cat facts in a chat interface
+- Supports commands for fetching jokes and cat facts
 
 ## Setup
 
