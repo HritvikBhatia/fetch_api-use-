@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fetch_api</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleS.css">
 </head>
-
 <body>
-
-    <div class="chat-list">
+    <div class="cmd">
         <ul>
             List of commands
             <br></br>
@@ -19,22 +17,15 @@
             <li>getjoke : for random jokes </li>
         </ul>
     </div>
-
-    <div class="chat-container">
-
-        <div class="messages" id="messages">
-            <div class="message bot">Type any command</div>
-        </div>
-
-        <div class="input-container">
-            <input type="text" class="userInput" placeholder="Type your message...">
-            <button onclick="user()">Send</button>
-        </div>
-
+    
+    <div class="screen">
+        
     </div>
-
-    <script src="app.js"></script>
-
+    
+    <div class="container">
+        <input type="text" class="message" onkeypress="handleKeyPress(event)">
+        <button type="button" onclick=user()>send</button>
+    </div>
+        <script src="app.js"></script>
 </body>
-
 </html>
